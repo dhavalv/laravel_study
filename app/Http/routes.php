@@ -26,9 +26,9 @@ Route::get('calender', function () {
             'url' => 'http://full-calendar.io'
         ]
     );
-    echo '<pre>';
-    print_r($event);
-    die;
+//    echo '<pre>';
+  //  print_r($event);
+   // die;
 });
 /*
 |--------------------------------------------------------------------------
