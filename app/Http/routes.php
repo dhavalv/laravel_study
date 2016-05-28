@@ -106,3 +106,9 @@ Route::group(['prefix' => 'api/v1','middleware'=>'web'],function(){
     });*/
 });
 //https://www.paypal.com/in/cgi-bin/merchantpaymentweb?cmd=_flow&SESSION=4L2PwjZp1CKLm-5Fq3mMEzDv_wS5Cyr1rFV0X0aFquHQLQXS-sWAM7irktK&dispatch=50a222a57771920b6a3d7b606239e4d529b525e0b7e69bf0224adecfb0124e9b61f737ba21b081984719ecfa9a8ffe80733a1a700ced90ae
+
+Route::group(['middleware' => 'web'], function () {
+    Route::auth();
+
+    Route::get('/home', 'HomeController@index');
+});
